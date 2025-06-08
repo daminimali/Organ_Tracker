@@ -1,0 +1,78 @@
+/* Home.css */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-container {
+  text-align: center;
+  background: url('../images/homebg.jpg') no-repeat center center/cover;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.home-container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: slideUp 2s ease-out;
+}
+
+.home-container p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  animation: slideUp 2s ease-out;
+}
+
+.home-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: slideUp 2s ease-out;
+}
+
+.home-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+.hero-img {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-btn-group {
+  display: flex;
+  gap: 20px; /* This creates space between the buttons */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-btn-group.single-button {
+  justify-content: center;
+}

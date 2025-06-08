@@ -1,0 +1,100 @@
+/* About.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Sections Styling */
+.about, .compatibility, .blockchain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: #B3D4E0;
+  color: #333;
+  height: 100vh;
+}
+
+/* Text Styling */
+.about h3, 
+.compatibility h3, .blockchain h3 {
+  font-size: 2.5rem; /* Adjust as needed */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-content, .compatibility-content, .blockchain-content {
+  max-width: 50%;
+  transition: transform 1s, opacity 1s;
+}
+
+.about-content, .blockchain-content {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.about-content.slide-in-right, .blockchain-content.slide-in-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.compatibility-content {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.compatibility-content.slide-in-left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Image Containers */
+.about-image-container, .compatibility-image-container, .blockchain-image-container {
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+/* Images */
+.about-image, .blockchain-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.about-image.slide-in-left, .blockchain-image.slide-in-left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Compatibility Section: Image Left, Text Right */
+.compatibility {
+  flex-direction: row-reverse;
+}
+
+.compatibility-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.compatibility-image.slide-in-right {
+  transform: translateX(0);
+  opacity: 1;
+}
